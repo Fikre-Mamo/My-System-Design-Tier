@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>System Design Tier List</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>System Design Tier List</h1>
+      <p>Drag each concept into a tier. Download when you're done.</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <!-- Board -->
+    <div class="board" id="board">
+
+      <!-- Tier Rows -->
+      <div id="tier-container"></div>
+
+      <!-- Unranked -->
+      <div class="unranked-section">
+        <div class="unranked-label">Unranked · Drag into a tier above ↑</div>
+        <div class="unranked-zone" id="zone-unranked" data-zone="unranked"></div>
+      </div>
+
+    </div>
+
+    <!-- Desktop Side Panel -->
+    <div class="side-panel closed" id="side-panel">
+      <div class="side-panel-inner">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">
+            <div class="panel-icon" id="dp-icon-bg"><span id="dp-icon">📦</span></div>
+            <h2 class="panel-title" id="dp-title"></h2>
+          </div>
+          <button class="close-btn" id="dp-close">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <p class="panel-section-label">What is it?</p>
+        <p class="panel-text" id="dp-what"></p>
+        <p class="panel-section-label">When is it useful?</p>
+        <p class="panel-text" id="dp-when"></p>
+        <p class="panel-section-label">Tools</p>
+        <div class="tools-wrap" id="dp-tools"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span class="footer-hint">Drag into a tier above · tap a card to learn more</span>
+    <div class="footer-btns">
+      <button class="btn" id="btn-reset">Reset</button>
+      <button class="btn btn-primary" id="btn-download">Download PNG</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Mobile Bottom Sheet -->
+<div class="sheet-backdrop" id="sheet-backdrop"></div>
+<div class="bottom-sheet" id="bottom-sheet">
+  <div class="sheet-handle"></div>
+  <div class="panel-header">
+    <div class="panel-icon-wrap">
+      <div class="panel-icon" id="bs-icon-bg"><span id="bs-icon">📦</span></div>
+      <h2 class="panel-title" id="bs-title"></h2>
+    </div>
+    <button class="close-btn" id="bs-close">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <p class="panel-section-label">What is it?</p>
+  <p class="panel-text" id="bs-what"></p>
+  <p class="panel-section-label">When is it useful?</p>
+  <p class="panel-text" id="bs-when"></p>
+  <p class="panel-section-label">Tools</p>
+  <div class="tools-wrap" id="bs-tools"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
