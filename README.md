@@ -30,7 +30,7 @@ A sleek, interactive web application that allows users to categorize various sys
 
 ## How to Run
 
-Since this is a static, single-page application, you can simply open the `tier-list.html` file in any modern web browser to start using it.
+Since this is a static web application, you can simply open the `index.html` file in any modern web browser to start using it. The project is organized into `index.html`, `style.css`, and `script.js` for modularity.
 
 ## Built With
 
